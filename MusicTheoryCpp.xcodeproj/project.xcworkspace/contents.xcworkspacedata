@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MusicTheoryCpp.xcodeproj">
+      location = "self:/Users/Cem/Desktop/MusicTheoryCpp/MusicTheoryCpp.xcodeproj">
    </FileRef>
 </Workspace>

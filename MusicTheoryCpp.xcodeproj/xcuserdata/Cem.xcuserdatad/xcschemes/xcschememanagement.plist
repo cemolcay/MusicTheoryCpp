@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MusicTheoryCpp.xcscheme</key>
+		<key>MusicTheory.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>MusicTheoryTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B2CD7D16200FB9060030C025</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2CD7D28200FC40A0030C025</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2CD7D37200FC5DA0030C025</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
