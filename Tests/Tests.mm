@@ -35,6 +35,17 @@ using namespace MusicTheory;
   
   a4 = Note(45);
   XCTAssertEqual(a4.getMIDINoteNumber(), 45);
+
+  Interval M2 = {2};
+  Note b4 = a4 + 2;
+  
+}
+
+- (void)testInterval {
+  Interval unison = {0};
+  Interval m2 = {1};
+  XCTAssert(unison + 1 == m2);
+  XCTAssert(m2 - 1 == unison);
 }
 
 @end

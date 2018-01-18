@@ -13,6 +13,15 @@
 
 namespace MusicTheory {
 
+  struct Interval {
+    Interval(int halfsteps);
+    int halfsteps;
+
+    bool operator==(const Interval &lhs) const;
+    Interval operator+(const Interval &lhs) const;
+    Interval operator-(const Interval &lhs) const;
+  };
+  
   enum NoteType {
     C,
     DFlat,
@@ -28,6 +37,7 @@ namespace MusicTheory {
     B
   };
 
+
   class Note {
   public:
     Note(int midiNoteNumber);
@@ -40,13 +50,13 @@ namespace MusicTheory {
     
     NoteType type;
     int octave;
-  };
 
-  struct Interval {
-    int halfsteps;
+    bool operator==(Note &lhs);
+    Note operator+(const Interval &lhs);
+    Note operator-(const Interval &lhs);
+    Note operator+(const int &lhs);
+    Note operator-(const int &lhs);
   };
-
-  static Interval unison = {0};
 }
 
 #endif /* MusicTheory_hpp */

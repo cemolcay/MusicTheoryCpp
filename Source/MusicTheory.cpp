@@ -11,7 +11,23 @@
 
 namespace MusicTheory {
 
-  // MARK: Note
+  // MARK: - Interval
+
+  Interval::Interval(int halfsteps) : halfsteps(halfsteps) {}
+
+  bool Interval::operator==(const Interval &lhs) const {
+    return halfsteps == lhs.halfsteps;
+  }
+
+  Interval Interval::operator+(const Interval &lhs) const {
+    return Interval{halfsteps + lhs.halfsteps};
+  }
+
+  Interval Interval::operator-(const Interval &lhs) const {
+    return Interval{halfsteps - lhs.halfsteps};
+  }
+
+  // MARK: - Note
 
   Note::~Note() {}
 
@@ -39,5 +55,25 @@ namespace MusicTheory {
     int pianoKey = getPianoKeyIndex();
     double fn = powf(2.0, float(pianoKey - 49) / 12.0);
     return fn * base;
+  }
+
+  bool Note::operator==(Note &lhs) {
+    return getMIDINoteNumber() == lhs.getMIDINoteNumber();
+  }
+
+  Note Note::operator+(const MusicTheory::Interval &lhs) {
+    return Note(getMIDINoteNumber() + lhs.halfsteps);
+  }
+
+  Note Note::operator-(const MusicTheory::Interval &lhs) {
+    return Note(getMIDINoteNumber() - lhs.halfsteps);
+  }
+
+  Note Note::operator+(const int &lhs) {
+    return Note(getMIDINoteNumber() + lhs);
+  }
+
+  Note Note::operator-(const int &lhs) {
+    return Note(getMIDINoteNumber() - lhs);
   }
 }
