@@ -1,6 +1,6 @@
 //
 //  MusicTheory.cpp
-//  MusicTheoryCpp
+//  MusicTheory
 //
 //  Created by Cem Olcay on 17.01.2018.
 //  Copyright © 2018 cemolcay. All rights reserved.
