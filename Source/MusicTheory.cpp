@@ -27,6 +27,20 @@ namespace MusicTheory {
     return Interval{halfsteps - lhs.halfsteps};
   }
 
+  const Interval Interval::P1 = {0};
+  const Interval Interval::m2 = {1};
+  const Interval Interval::M2 = {2};
+  const Interval Interval::m3 = {3};
+  const Interval Interval::M3 = {4};
+  const Interval Interval::P4 = {5};
+  const Interval Interval::d5 = {6};
+  const Interval Interval::P5 = {7};
+  const Interval Interval::m6 = {8};
+  const Interval Interval::M6 = {9};
+  const Interval Interval::m7 = {10};
+  const Interval Interval::M7 = {11};
+  const Interval Interval::P8 = {12};
+
   // MARK: - Note
 
   Note::~Note() {}

@@ -50,10 +50,8 @@ using namespace MusicTheory;
 }
 
 - (void)testInterval {
-  Interval unison = {0};
-  Interval m2 = {1};
-  XCTAssert(unison + 1 == m2);
-  XCTAssert(m2 - 1 == unison);
+  XCTAssert(Interval::P1 + 1 == Interval::m2);
+  XCTAssert(Interval::m2 - 1 == Interval::P1);
 }
 
 @end
