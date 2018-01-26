@@ -32,10 +32,8 @@ namespace MusicTheory {
   Note::~Note() {}
 
   Note::Note(int midiNoteNumber) {
-    octave = (midiNoteNumber / 12) - (midiNoteNumber < 0 ? 1 : 0);
-    type = NoteType(octave > 0 ?
-                    (midiNoteNumber - (octave * 12)) :
-                    (midiNoteNumber - ((octave + 1) * 12) + 12));
+    octave = (midiNoteNumber / 12) - 1;
+    type = NoteType(midiNoteNumber - ((octave + 1) * 12));
   }
 
   Note::Note(NoteType noteType, int octave) {
@@ -44,16 +42,11 @@ namespace MusicTheory {
   }
   
   int Note::getMIDINoteNumber() {
-    return type + (octave * 12);
-  }
-
-  int Note::getPianoKeyIndex() {
-    return getMIDINoteNumber() + 4;
+    return type + ((octave + 1) * 12);
   }
 
   double Note::getFrequency(double base) {
-    int pianoKey = getPianoKeyIndex();
-    double fn = powf(2.0, float(pianoKey - 49) / 12.0);
+    double fn = powf(2.0, float(getMIDINoteNumber() - 69) / 12.0);
     return fn * base;
   }
 
