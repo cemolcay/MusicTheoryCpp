@@ -11,6 +11,8 @@
 		B29A28C6201BEF7700B365D1 /* MusicTheory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B29A28C4201BEF7700B365D1 /* MusicTheory.cpp */; };
 		B29A28C7201BEF7700B365D1 /* MusicTheory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B29A28C5201BEF7700B365D1 /* MusicTheory.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		B29A28CA201BEF9700B365D1 /* Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B29A28C9201BEF9700B365D1 /* Tests.mm */; };
+		B2B3BBF8201BF8B000458F78 /* Scale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2B3BBF6201BF8B000458F78 /* Scale.cpp */; };
+		B2B3BBF9201BF8B000458F78 /* Scale.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B2B3BBF7201BF8B000458F78 /* Scale.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		B29A28C4201BEF7700B365D1 /* MusicTheory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MusicTheory.cpp; sourceTree = "<group>"; };
 		B29A28C5201BEF7700B365D1 /* MusicTheory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MusicTheory.hpp; sourceTree = "<group>"; };
 		B29A28C9201BEF9700B365D1 /* Tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tests.mm; sourceTree = "<group>"; };
+		B2B3BBF6201BF8B000458F78 /* Scale.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scale.cpp; sourceTree = "<group>"; };
+		B2B3BBF7201BF8B000458F78 /* Scale.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scale.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				B29A28C4201BEF7700B365D1 /* MusicTheory.cpp */,
 				B29A28C5201BEF7700B365D1 /* MusicTheory.hpp */,
+				B2B3BBF6201BF8B000458F78 /* Scale.cpp */,
+				B2B3BBF7201BF8B000458F78 /* Scale.hpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29A28C7201BEF7700B365D1 /* MusicTheory.hpp in Headers */,
+				B2B3BBF9201BF8B000458F78 /* Scale.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B3BBF8201BF8B000458F78 /* Scale.cpp in Sources */,
 				B29A28C6201BEF7700B365D1 /* MusicTheory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

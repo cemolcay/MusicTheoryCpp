@@ -6,8 +6,11 @@
 //  Copyright © 2018 cemolcay. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 #include "MusicTheory.hpp"
+#include "Scale.hpp"
+#include <vector>
 
 using namespace MusicTheory;
 
@@ -52,6 +55,21 @@ using namespace MusicTheory;
 - (void)testInterval {
   XCTAssert(Interval::P1 + 1 == Interval::m2);
   XCTAssert(Interval::m2 - 1 == Interval::P1);
+}
+
+- (void)testScales {
+  Note cmajor[] = { Note(C, 1), Note(D, 1), Note(E, 1), Note(F, 1), Note(G, 1), Note(A, 1), Note(B, 1) };
+
+  Scale major = Scale::major;
+  Interval majorIntervals[] = {Interval::P1, Interval::M2, Interval::M3, Interval::P4, Interval::P5, Interval::M6, Interval::M7};
+  for (int i = 0; i < 7; i++) {
+    XCTAssertEqual(major.intervals[i].halfsteps, majorIntervals[i].halfsteps);
+  }
+
+  std::vector<Note> cmajorNotes = major.getNotes(C, 1);
+  for (int i = 0; i < 7; i++) {
+    XCTAssertEqual(cmajor[i].getMIDINoteNumber(), cmajorNotes[i].getMIDINoteNumber());
+  }
 }
 
 @end
